@@ -103,3 +103,13 @@ a {
     border: none;
   }
 }
+.wr-select{
+  width: fit-content;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  &:focus{
+    box-shadow: none;
+    border-color: $primary-light-border;
+  }
+}

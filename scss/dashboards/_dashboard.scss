@@ -44,10 +44,14 @@
 .wr-dashboardcard_desc {
   font-size: 14px;
   font-weight: 400;
-
 }
-.wr-card_container{
-    background-color: white;
-    border-radius: 14px;
-    padding: 18px;
+.wr-card_container {
+  background-color: white;
+  border-radius: 14px;
+  padding: 18px;
+}
+.wr-card_header {
+  color: $text-black;
+  font-weight: 500;
+  font-size: 1rem;
 }
