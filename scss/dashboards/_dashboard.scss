@@ -1,0 +1,53 @@
+.wr-dashboard_card {
+  background: linear-gradient(258.89deg, #007474 -0.78%, #59a5a5 101.53%);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.wr-dashboard_card::before {
+  position: absolute;
+  content: "";
+  background-image: url("/assets/images/dashboard/card-bg-left.svg");
+  background-repeat: no-repeat;
+  width: 170px;
+  height: 166px;
+  top: 0px;
+  left: 0px;
+}
+
+.wr-dashboard_card::after {
+  position: absolute;
+  content: "";
+  background-image: url("/assets/images/dashboard/card-bg-right.svg");
+  background-repeat: no-repeat;
+  width: 170px;
+  height: 166px;
+  bottom: -103px;
+  right: -122px;
+}
+.wr-dashboardcard_main-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 45.36px;
+  font-family: $wr-text-plus-jakarta;
+}
+.wr-dashboardcard_subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  margin-bottom: 0.3rem;
+}
+.wr-dashboardcard_desc {
+  font-size: 14px;
+  font-weight: 400;
+
+}
+.wr-card_container{
+    background-color: white;
+    border-radius: 14px;
+    padding: 18px;
+}
