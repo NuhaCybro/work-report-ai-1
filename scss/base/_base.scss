@@ -12,7 +12,12 @@ a {
   color: inherit;
 }
 .wr-wrapper {
-  display: flex;
+display: flex;
+  position: relative;
+
+  @media (max-width:576px){
+    display: block;
+  }
 }
 .wr-sidebar {
   width: 240px;
@@ -28,6 +33,14 @@ a {
   top: 0px;
   left: 0px;
   transition: width 0.3s ease;
+  z-index: 111;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    display: none;
+  }
 }
 
 .wr-logo-container {
@@ -137,6 +150,7 @@ a {
     font-size: 14px;
     color: rgba(130, 136, 152, 1);
     font-weight: 500;
+    white-space: nowrap;
   }
   td {
     font-size: 13.6px;
@@ -183,13 +197,13 @@ a {
 
 .wr-sidebar.collapsed .wr-menu-links span {
   opacity: 0;
-  display: none; 
+  display: none;
 }
-.wr-sidebar.collapsed{
-  .wr-logo{
+.wr-sidebar.collapsed {
+  .wr-logo {
     display: none;
   }
-  .wr-menu-links{
+  .wr-menu-links {
     padding: 8px 12px;
   }
 }

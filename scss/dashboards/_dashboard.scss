@@ -58,6 +58,11 @@
 .chart-container {
   max-width: 300px;
   margin: 0 auto;
+  @media (max-width: 576px) {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+  }
 }
 
 .legend-container {
@@ -384,12 +389,21 @@
 .wr-skill_graph-container {
   width: 100%;
   height: 165px;
+  padding: 1rem;
 
   display: flex;
   justify-content: center;
+  @media (max-width: 992px) {
+    height: auto;
+  }
 }
-.wr-graph_content{
+.wr-graph_content {
+  width: 100%;
   height: 380px;
+
+  @media (max-width: 992px) {
+    height: auto;
+  }
 }
 
 @keyframes animationLoaded {
@@ -398,5 +412,12 @@
   }
   100% {
     width: 100%;
+  }
+}
+
+.container{
+  @media (max-width:576px){
+   max-width: 500px;
+
   }
 }

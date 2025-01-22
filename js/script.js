@@ -15,6 +15,7 @@ new Chart(ctx, {
     ],
   },
   options: {
+    responsive: true,
     rotation: -90,
     circumference: 180,
     cutout: "90%",
@@ -188,7 +189,7 @@ new Chart(summaryChart, {
   options: {
     rotation: -90,
     circumference: 180,
-
+    responsive: true,
     plugins: {
       legend: {
         display: false,
@@ -334,7 +335,7 @@ const optionskills = {
   },
 
   responsive: true,
-  maintainAspectRatio: true,
+  maintainAspectRatio: false,
 
   cutout: "80%", // Adjusts the doughnut's inner cutout size // Adjusts the size for better responsiveness
 };
@@ -381,6 +382,7 @@ const optionstool = {
         },
       },
     },
+    
     legend: {
       position: "right",
       labels: {
@@ -396,10 +398,11 @@ const optionstool = {
         borderRadius: 10, // Height of the legend box
       },
     },
+    
   },
 
   responsive: true,
-  maintainAspectRatio: true,
+  maintainAspectRatio: false,
 
   cutout: "80%", // Adjusts the doughnut's inner cutout size // Adjusts the size for better responsiveness
 };
@@ -437,6 +440,7 @@ var multipleBarChart = new Chart(multipleBargraphctx, {
     ],
   },
   options: {
+    responsive: true,
     legend: {
     
     },
@@ -502,6 +506,7 @@ const gradientLineChart = new Chart(gradientgraphctx, {
     ],
   },
   options: {
+    
     layout: {
       padding: {
         top: 50, // Top padding
