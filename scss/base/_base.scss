@@ -24,7 +24,12 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  transition: width 0.3s ease;
 }
+
 .wr-logo-container {
   display: flex;
   justify-content: center;
@@ -59,6 +64,9 @@ a {
   width: 100%;
   padding: 0.75rem;
   background-color: white;
+  position: sticky;
+  top: 0px;
+  z-index: 11;
 }
 .wr-profile-btn {
   width: 40px;
@@ -103,13 +111,85 @@ a {
     border: none;
   }
 }
-.wr-select{
+.wr-select {
   width: fit-content;
   font-size: 14px;
   font-weight: 400;
   border: none;
-  &:focus{
+  &:focus {
     box-shadow: none;
     border-color: $primary-light-border;
+  }
+}
+
+//table
+
+.wr-table {
+  border: 1px solid rgba(236, 243, 251, 1);
+  th,
+  td {
+    border: 1px solid rgba(236, 243, 251, 1);
+
+    padding: 8px 13px;
+    border-top: none;
+  }
+  th {
+    font-size: 14px;
+    color: rgba(130, 136, 152, 1);
+    font-weight: 500;
+  }
+  td {
+    font-size: 13.6px;
+    color: $text-black;
+    border-bottom: none;
+  }
+  td:first-child {
+    text-align: center;
+  }
+}
+
+//pagination.
+
+.wr-pagination {
+  display: flex;
+  justify-content: end;
+  border: none;
+  margin-bottom: 0.5rem;
+
+  .page-link {
+    border: none;
+    color: $text-black;
+    border-radius: 8px;
+    font-size: 12px;
+  }
+  .page-link {
+    border-radius: 8px;
+    &.active {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+}
+
+.wr-sidebar.collapsed {
+  width: auto;
+}
+
+.wr-menubar .wr-menu-links span {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+  display: inline-block;
+}
+
+.wr-sidebar.collapsed .wr-menu-links span {
+  opacity: 0;
+  display: none; 
+}
+.wr-sidebar.collapsed{
+  .wr-logo{
+    display: none;
+  }
+  .wr-menu-links{
+    padding: 8px 12px;
   }
 }

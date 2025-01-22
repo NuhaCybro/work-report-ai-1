@@ -48,10 +48,355 @@
 .wr-card_container {
   background-color: white;
   border-radius: 14px;
-  padding: 18px;
+  padding: 20px;
 }
 .wr-card_header {
   color: $text-black;
   font-weight: 500;
   font-size: 1rem;
+}
+.chart-container {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.legend-container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.legend-container span {
+  margin: 0 10px;
+  font-size: 14px;
+}
+.wr-chart_state {
+  text-align: center;
+  .completed {
+    color: $text-green;
+  }
+  .delayed {
+    color: $text-yellow;
+  }
+  .ongoing {
+    color: $text-red;
+  }
+  span {
+    font-size: 20px;
+    line-height: 26.63px;
+  }
+  p {
+    font-size: 12px;
+    color: $text-light;
+  }
+}
+.wr-task_overview-card {
+  text-align: center;
+  padding: 24px 16px;
+  border-radius: 12px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &.ongoing {
+    background-color: $primary-color;
+    color: white;
+  }
+  &.pending {
+    background-color: rgba(255, 221, 103, 1);
+    color: white;
+  }
+  &.completed {
+    background-color: rgba(248, 250, 252, 1);
+    color: black;
+    .wr-task_icon {
+      color: $text-green;
+      border-color: rgba(203, 213, 225, 1);
+    }
+  }
+  .task_state {
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+  }
+  span {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .wr-task_icon {
+    width: 40px;
+    height: 40px;
+    border: 1.6px solid white;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+}
+.wr-card_rating {
+  font-size: 12px;
+  color: $text-gray;
+  margin-bottom: 0.5rem;
+}
+.rating-percentage {
+  font-size: 24px;
+  font-weight: 700;
+}
+.wr-emotional_graph {
+  width: 180px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wr-emoji {
+  position: absolute;
+  font-size: 2rem;
+}
+.wr-emotional_cardcontent {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $primary-color;
+  span {
+    font-size: 24px;
+  }
+}
+.wr-emotion_overview {
+  background-color: rgba(249, 249, 250, 1);
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.wr-emotion_overview-content {
+  text-align: center;
+  font-size: 14px;
+
+  p {
+    margin-bottom: 0px;
+  }
+}
+.wr-emtional_label {
+  width: 10px;
+  height: 10px;
+  background-color: $primary-color;
+  border-radius: 50px;
+}
+.wr-emtional-neutral {
+  background-color: rgba(89, 165, 165, 1);
+}
+.wr-emtional-negative {
+  background-color: rgba(172, 222, 222, 1);
+}
+.wr-team-group {
+  display: flex;
+}
+.wr-profile {
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  border: 2.5px solid white;
+  overflow: hidden;
+
+  &:not(:first-child) {
+    margin-left: -12px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .wr-profiles {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(236, 243, 251, 1);
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.complexity-high {
+  color: $text-red;
+}
+.complexity-low {
+  color: $text-green;
+}
+.progress-bar {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.progress-bar .line {
+  height: 8px;
+  background: rgba(242, 242, 255, 1);
+  border-radius: 7px;
+  position: relative;
+}
+
+.progress-bar > .line > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+
+  border-radius: 10px 0px 0px 10px;
+  &.inprogress {
+    background: $text-blue;
+  }
+  &.pending {
+    background-color: $text-yellow;
+  }
+}
+.in-progress {
+  color: $text-blue;
+  font-weight: 500;
+  padding: 6px 8px;
+  border-radius: 3px;
+  background-color: rgba(92, 103, 247, 0.1);
+  &.pending {
+    color: $text-yellow;
+    background-color: rgba(255, 249, 238, 1);
+  }
+}
+.wr-due_date-over {
+  color: $text-red;
+}
+.wr-summary_note {
+  color: $text-gray;
+  font-size: 12px;
+  line-height: 18.8px;
+}
+.wr-summary_pagination {
+  display: flex;
+  justify-content: end;
+  color: $primary-color;
+
+  button {
+    color: $primary-color;
+    font-size: 24px;
+  }
+}
+.wr-progress_container {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1.5rem;
+
+  .progress-bar {
+    width: 100%;
+    display: block;
+    .line {
+      height: 14px;
+      background: rgba(92, 103, 247, 0.1);
+      border-radius: 7px;
+      position: relative;
+    }
+  }
+  .progress-bar > .line > span {
+    position: absolute;
+    left: 6px;
+    top: 3px;
+    height: 50%;
+
+    border-radius: 10px;
+
+    &.almost {
+      background-color: $text-green;
+    }
+
+    &.medium {
+      background-color: $text-blue;
+    }
+    &.pending {
+      background-color: $text-yellow;
+    }
+    &.started {
+      background-color: $text-red;
+    }
+  }
+  .label {
+    font-size: 12px;
+    color: $text-black;
+    font-weight: 600;
+  }
+  .wr-project_name {
+    font-size: 12px;
+    color: $text-black;
+    position: absolute;
+    top: -2px;
+  }
+  .wr-progress_count {
+    color: $text-gray;
+    font-size: 12px;
+    font-weight: 500;
+    padding-top: 0.5rem;
+    display: flex;
+    gap: 0.2rem;
+  }
+}
+.wr-weekly_report-overview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  width: 70%;
+  margin: 1rem auto;
+
+  h4 {
+    margin-bottom: 0px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  span {
+    color: rgba(118, 118, 118, 1);
+    font-size: 12px;
+  }
+}
+.wr-report_summary_title {
+  margin-bottom: 0.2rem;
+  span {
+    color: $text-black;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  button {
+    color: $primary-color;
+    background-color: $secondary-color;
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    font-size: 13px;
+  }
+}
+.wr-skill_graph-container {
+  width: 100%;
+  height: 165px;
+
+  display: flex;
+  justify-content: center;
+}
+.wr-graph_content{
+  height: 380px;
+}
+
+@keyframes animationLoaded {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
