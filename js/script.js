@@ -1,3 +1,19 @@
+//.......................
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButton = document.querySelector(".wr-sidebar-toggle");
+  const sidebar = document.querySelector(".wr-sidebar");
+
+ 
+  if (toggleButton && sidebar) {
+    toggleButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      sidebar.classList.toggle("collapsed");
+    });
+  } else {
+    console.warn("Sidebar toggle elements not found on this page.");
+  }
+});
+
 
 const ctx = document.getElementById("gaugeChart").getContext("2d");
 
@@ -538,10 +554,4 @@ const gradientLineChart = new Chart(gradientgraphctx, {
       },
     },
   },
-});
-//.......................
-document.querySelector(".wr-sidebar-toggle").addEventListener("click", (event) => {
-  event.preventDefault(); // Prevent the default behavior of the <a> tag
-  const sidebar = document.querySelector(".wr-sidebar");
-  sidebar.classList.toggle("collapsed");
 });
