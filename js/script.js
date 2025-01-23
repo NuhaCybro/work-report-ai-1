@@ -13,7 +13,32 @@ document.addEventListener("DOMContentLoaded", () => {
     console.warn("Sidebar toggle elements not found on this page.");
   }
 });
+//...................................
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButtons = document.querySelectorAll('.wr-mob-menu');
+  const sidebars = document.querySelectorAll('.wr-sidebar');
+
+  toggleButtons.forEach((toggleButton, index) => {
+    toggleButton.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent click from propagating to the document
+      const sidebar = sidebars[index];
+      if (sidebar) {
+        sidebar.classList.toggle('active');
+      }
+    });
+  });
+
+  // Close sidebar on clicking outside
+  document.addEventListener('click', (e) => {
+    sidebars.forEach((sidebar) => {
+      if (sidebar.classList.contains('active') && !sidebar.contains(e.target)) {
+        sidebar.classList.remove('active');
+      }
+    });
+  });
+});
 
 const ctx = document.getElementById("gaugeChart").getContext("2d");
 
