@@ -34,6 +34,15 @@
     font-weight: 400;
   }
 }
+.accordion-item:nth-child(odd) {
+    background-color: rgba(247, 247, 248, 1); /* Replace with your desired grey color */
+  }
+  .wr-report-accordian{
+    .accordion-button.collapsed {
+        border-color: $primary-color;
+      }
+    
+  }
 .wr-report-accordian {
   .accordion-button:not(.collapsed) {
     background-color: transparent;
@@ -42,6 +51,9 @@
   }
   .accordion-button:focus {
     box-shadow: none;
+  }
+  .accordion-button::after {
+    color: rgba(148, 163, 184, 1);
   }
 }
 .wr-report_user--profile {
@@ -65,4 +77,32 @@
 .wr-report_accordian-title {
   font-size: 1rem;
   color: rgba(96, 102, 109, 1);
+}
+.wr-accordion_content {
+  font-size: 12.8px;
+  color: rgba(120, 121, 123, 1);
+
+}
+.wr-calendar_icon {
+  color: $text-black;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.wr-remark_text {
+  color: rgba(70, 70, 70, 1);
+  margin-top: 2rem;
+}
+.wr-report_play{
+    display: flex;
+    align-items: center;
+    margin-bottom: auto;
+
+    span{
+        font-size: 14px;
+    }
+   i{
+    font-size: 24px;
+    color: $primary-color;
+   } 
 }

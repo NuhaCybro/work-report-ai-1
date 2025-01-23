@@ -35,7 +35,7 @@ a {
   transition: width 0.3s ease;
   z-index: 111;
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     position: absolute;
     top: 0px;
     height: 100%;
@@ -261,7 +261,8 @@ a {
 
   /* Adjust day cell height to prevent extra space */
   .fc-daygrid-day-frame {
-    height: auto;
+   display: flex;
+   justify-content: center;
   }
   .fc-button {
     padding: 0px;
@@ -277,7 +278,10 @@ a {
   .fc-daygrid-day.fc-day-today {
     background-color: $primary-color;
     border-radius: 50px;
-    color: white;
+ 
     box-shadow: 1px 2px 7px 0px rgba(89, 165, 165, 0.29);
+    .fc-daygrid-day-number{
+      color: white;
+    }
   }
 }
