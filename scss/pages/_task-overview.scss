@@ -1,0 +1,80 @@
+.wr-tabs-nav {
+  border-bottom: 1px solid #e9eaf0;
+  .wr-tabs-list {
+    border: none;
+    display: flex;
+    gap: 20px;
+    .wr-tab-link {
+      border: none;
+      color: #6e7485;
+      width: 300px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px;
+      .wr-task-count {
+        margin: 0;
+        color: #23bd33;
+      }
+      i {
+        font-size: 20px;
+        margin-right: 6px;
+      }
+    }
+    .active {
+      border-bottom: 2px solid $primary-color;
+      color: $primary-color;
+    }
+  }
+}
+
+.wr-task-card-item {
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: start;
+  }
+  .wr-task-card-item-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  .wr-task-card-item-details {
+    .wr-task-card-item-details-lists {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin: 0;
+      padding: 0;
+    }
+    .wr-task-card-item-info {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      h5 {
+        margin: 0;
+        font-size: 16px;
+        i {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  .wr-task-action {
+    @media (max-width: 768px) {
+      margin-top: 24px;
+    }
+    .wr-task-view-btn {
+      background-color: #f5f7fa;
+      color: $primary-color;
+      border: 1px solid #f5f7fa;
+      border-radius: 0;
+    }
+  }
+}
