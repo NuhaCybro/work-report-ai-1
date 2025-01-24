@@ -9,7 +9,11 @@
   .wr-select {
     color: white;
     background-color: transparent;
-    padding: 0px 18px;
+    padding: 0px 18px 0px 0px;
+  }
+  button {
+    color: white;
+    font-size: 14px;
   }
 }
 .wr-summary_listing {
@@ -35,14 +39,20 @@
   }
 }
 .accordion-item:nth-child(odd) {
-    background-color: rgba(247, 247, 248, 1); /* Replace with your desired grey color */
+  background-color: rgba(
+    247,
+    247,
+    248,
+    1
+  ); /* Replace with your desired grey color */
+}
+
+.wr-report-accordian {
+  .accordion-button.collapsed {
+    border-color: $primary-color;
+ 
   }
-  .wr-report-accordian{
-    .accordion-button.collapsed {
-        border-color: $primary-color;
-      }
-    
-  }
+}
 .wr-report-accordian {
   .accordion-button:not(.collapsed) {
     background-color: transparent;
@@ -81,8 +91,15 @@
 .wr-accordion_content {
   font-size: 12.8px;
   color: rgba(120, 121, 123, 1);
+}
+.accordion-item:has(.accordion-collapse.show) {
+  border-color: $primary-color;
 
 }
+.accordion-item:not(:first-of-type){
+  border-top:1px solid #dee2e6;
+}
+
 .wr-calendar_icon {
   color: $text-black;
   font-size: 1rem;
@@ -93,17 +110,23 @@
   color: rgba(70, 70, 70, 1);
   margin-top: 2rem;
 }
-.wr-report_play{
-    display: flex;
-    align-items: center;
-    margin-top: auto;
-    margin-bottom: 1rem;
+.wr-report-play-detail {
+  margin-top: auto;
+}
+.wr-report_play {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
 
-    span{
-        font-size: 14px;
-    }
-   i{
+  span {
+    font-size: 14px;
+  }
+  i {
     font-size: 24px;
     color: $primary-color;
-   } 
+  }
+}
+.wr-report_task_detail {
+  font-size: 12.8px;
+  white-space: nowrap;
 }

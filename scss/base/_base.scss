@@ -41,7 +41,7 @@ a {
     height: 100%;
     display: none;
   }
-  &.active{
+  &.active {
     display: flex;
   }
 }
@@ -69,6 +69,7 @@ a {
   i {
     font-size: 24px;
   }
+  &.active,
   &:hover {
     background-color: $primary-color;
     color: white;
@@ -264,8 +265,8 @@ a {
 
   /* Adjust day cell height to prevent extra space */
   .fc-daygrid-day-frame {
-   display: flex;
-   justify-content: center;
+    display: flex;
+    justify-content: center;
   }
   .fc-button {
     padding: 0px;
@@ -281,9 +282,9 @@ a {
   .fc-daygrid-day.fc-day-today {
     background-color: $primary-color;
     border-radius: 50px;
- 
+
     box-shadow: 1px 2px 7px 0px rgba(89, 165, 165, 0.29);
-    .fc-daygrid-day-number{
+    .fc-daygrid-day-number {
       color: white;
     }
   }

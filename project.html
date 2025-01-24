@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <!-- FullCalendar -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Work Report</title>
+  </head>
+  <body>
+    <div class="wr-wrapper">
+      <div class="col-3 wr-sidebar">
+        <div class="wr-logo-container">
+          <a href=""
+            ><button class="wr-sidebar-toggle btn me-1">
+              <i class="ri-side-bar-line"></i></button
+            ><img
+              class="wr-logo"
+              src="/assets/images/WORK REPORT.AI LOGO 01 1.svg"
+              alt=""
+          /></a>
+        </div>
+        <ul class="wr-menubar">
+          <li>
+            <a href="index.html" class="wr-menu-links"
+              ><i class="ri-dashboard-fill"></i> <span>Dashboard</span></a
+            >
+          </li>
+          <li>
+            <a href="report.html" class="wr-menu-links"
+              ><i class="ri-file-chart-line"></i><span>Report</span></a
+            >
+          </li>
+          <li>
+            <a href="" class="wr-menu-links"
+              ><i class="ri-team-line"></i><span>Employees</span></a
+            >
+          </li>
+          <li>
+            <a href="" class="wr-menu-links active"
+              ><i class="ri-file-list-line"></i><span>Projects</span></a
+            >
+          </li>
+          <li>
+            <a href="" class="wr-menu-links"
+              ><i class="ri-list-check-3"></i><span>Tasks</span></a
+            >
+          </li>
+          <li>
+            <a href="" class="wr-menu-links"
+              ><i class="ri-lightbulb-flash-line"></i
+              ><span>Skills & Tools</span></a
+            >
+          </li>
+          <li>
+            <a href="" class="wr-menu-links"
+              ><i class="ri-settings-2-line"></i><span>Settings</span></a
+            >
+          </li>
+          <li>
+            <a href="" class="wr-menu-links"
+              ><i class="ri-logout-circle-line"></i><span>Log out</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="wr-main flex-grow-1 position-relative">
+        <nav class="container-fluid wr-top_nav position-sticky">
+          <div class="row">
+            <div class="col-6">
+              <span
+                ><button class="btn d-block d-lg-none wr-mob-menu">
+                  <i class="ri-menu-2-line"></i></button
+              ></span>
+            </div>
+            <div class="col-6">
+              <div class="d-flex justify-content-end">
+                <form class="d-flex wr-search_container">
+                  <span class="wr-search_icon"
+                    ><i class="ri-search-line"></i
+                  ></span>
+                  <input
+                    class="form-control me-2 wr-top_navsearch"
+                    type="search"
+                    placeholder="Search anything...."
+                    aria-label="Search"
+                  />
+                </form>
+                <div class="wr-notification">
+                  <button class="btn">
+                    <i class="ri-notification-4-line"></i>
+                  </button>
+                </div>
+                <div class="dropdown pe-4">
+                  <button
+                    class="btn wr-profile-btn p-0 dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img
+                      src="/assets/images/profile.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="container-fluid p-3">
+          <div class="row">
+            <div class="col-md-4"><div class="wr-card_container"></div></div>
+            <div class="col-md-4"><div class="wr-card_container"></div></div>
+            <div class="col-md-4"><div class="wr-card_container"></div></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
