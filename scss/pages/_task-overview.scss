@@ -46,11 +46,13 @@
   }
   .wr-task-card-item-details {
     .wr-task-card-item-details-lists {
-      display: flex;
-      flex-direction: column;
+      display: flex; 
       gap: 40px;
       margin: 0;
       padding: 0;
+      @media(max-width:768px){
+        flex-direction: column;
+      }
     }
     .wr-task-card-item-info {
       list-style: none;
