@@ -1,0 +1,77 @@
+.wr-project_logo-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0.3rem;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 123, 0, 0.43);
+  }
+}
+.wr-project_header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.wr-project_sm--btn {
+  color: $primary-color;
+  background-color: $secondary-color;
+  border-radius: 50px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:after {
+    display: none;
+  }
+}
+.wr-project_card_desc {
+  color: $text-gray;
+  font-size: 12.8px;
+  line-height: 18px;
+  margin-bottom: 1.5rem;
+}
+.wr-project_name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.wr-project_card {
+  padding: 24px;
+}
+.wr-project_add-card {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  position: relative;
+}
+.wr-project-addbtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  border: none;
+  background-color: $primary-color;
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 20px;
+  margin-top: 2rem;
+}
+.wr-project-addimg{
+  position: absolute;
+border-radius: 50px;
+overflow: hidden;
+}

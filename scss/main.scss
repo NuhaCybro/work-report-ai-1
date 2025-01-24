@@ -1,7 +1,7 @@
 @import 'abstracts/variable';
 
 //base
-@import 'base/base';
+@import 'base/base','base/button';
 
 //dashboards
 @import 'dashboards/dashboard', 'dashboards/report','dashboards/project';

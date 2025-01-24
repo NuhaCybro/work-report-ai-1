@@ -120,6 +120,7 @@ a {
 
 .wr-search_container {
   position: relative;
+  min-height: 45px;
 }
 .wr-search_container .wr-search_icon {
   position: absolute;
@@ -289,6 +290,33 @@ a {
 }
 .wr-calendar .fc-daygrid-day.fc-day-today .fc-daygrid-day-number {
   color: white;
+}
+
+.wr-btn {
+  padding: 10px;
+  font-size: 12.8px;
+  border-radius: 12px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+}
+.wr-btn i {
+  font-size: 14px;
+}
+
+.wr-btn_primary {
+  background-color: rgb(21, 128, 128);
+  border: 1px solid rgb(21, 128, 128);
+  color: white;
+}
+
+.wr-btn_secondary {
+  background-color: rgb(234, 247, 247);
+  color: rgb(21, 128, 128);
+  border: 1px solid rgb(220, 246, 246);
 }
 
 .wr-dashboard_card {
@@ -751,7 +779,7 @@ a {
 .wr-report_summary_card .wr-select {
   color: white;
   background-color: transparent;
-  padding: 0px 18px 0px 0px;
+  padding: 0px 28px 0px 0px;
 }
 .wr-report_summary_card button {
   color: white;
@@ -869,4 +897,84 @@ a {
 .wr-report_task_detail {
   font-size: 12.8px;
   white-space: nowrap;
+}
+
+.wr-project_logo-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0.3rem;
+}
+.wr-project_logo-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wr-project_logo-img:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 123, 0, 0.43);
+}
+
+.wr-project_header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.wr-project_sm--btn {
+  color: rgb(21, 128, 128);
+  background-color: rgb(234, 247, 247);
+  border-radius: 50px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wr-project_sm--btn:after {
+  display: none;
+}
+
+.wr-project_card_desc {
+  color: rgb(100, 116, 139);
+  font-size: 12.8px;
+  line-height: 18px;
+  margin-bottom: 1.5rem;
+}
+
+.wr-project_name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.wr-project_card {
+  padding: 24px;
+}
+
+.wr-project_add-card {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.wr-project-addbtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  border: none;
+  background-color: rgb(21, 128, 128);
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 20px;
+  margin-top: 2rem;
 }/*# sourceMappingURL=main.css.map */

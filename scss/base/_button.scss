@@ -1,0 +1,25 @@
+.wr-btn {
+  padding: 10px;
+  font-size: 12.8px;
+  border-radius: 12px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+
+  i{
+    font-size: 14px;
+  }
+}
+.wr-btn_primary {
+  background-color: $primary-color;
+  border: 1px solid $primary-color;
+  color: white;
+}
+.wr-btn_secondary {
+  background-color: $secondary-color;
+  color: $primary-color;
+  border: 1px solid rgba(220, 246, 246, 1);
+}
